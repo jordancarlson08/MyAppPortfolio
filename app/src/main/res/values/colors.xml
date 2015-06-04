@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_500">#FF2196F3</color>
+    <color name="blue_700">#FF1976D2</color>
+    <color name="pink_a400">#FFF50057</color>
+    <color name="actionbar_title_text">#ffffffff</color>
+</resources>
