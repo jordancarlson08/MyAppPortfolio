@@ -1,5 +1,7 @@
 package me.jordancarlson.myappportfolio;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +42,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.spotifyButton) void onSpotifyClick() {
-        Toast.makeText(this, "Launch Spotify Streamer app!", Toast.LENGTH_SHORT).show();
+        PackageManager packageManager = getPackageManager();
+        Intent intent = packageManager.getLaunchIntentForPackage("me.jordancarlson.spotifystreamer");
+        intent.setAction(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        startActivity(intent);
+//        Toast.makeText(this, "Launch Spotify Streamer app!", Toast.LENGTH_SHORT).show();
     }
     @OnClick(R.id.scoresButton) void onScoresClick() {
         Toast.makeText(this, "Launch Scores app!", Toast.LENGTH_SHORT).show();
